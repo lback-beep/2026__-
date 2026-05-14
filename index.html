@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市長決策系統：颱風登陸挑戰</title>
+    <meta name="description" content="作為市長，在颱風來襲時做出關鍵決策。看看你的選擇與高中生的想法是否一致！">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <div class="storm-particles" id="particles"></div>
+
+    <main class="container">
+        <!-- Screen 1: Intro -->
+        <section id="screen-intro" class="card active">
+            <div class="badge">緊急情境卡</div>
+            <h1>🌪️ 颱風即將登陸！</h1>
+            <p class="scenario-text">氣象局發布強烈颱風警報，預計明早進入本市。校園安全受威脅，作為<strong>市長</strong>，你必須現在做出決定。</p>
+            <button class="btn btn-primary" onclick="showScreen('screen-decision')">開始決策</button>
+        </section>
+
+        <!-- Screen 2: Decision -->
+        <section id="screen-decision" class="card">
+            <div class="badge">決策中心</div>
+            <h2>你是市長，你的選擇是？</h2>
+            <div class="options">
+                <button class="option-btn" onclick="makeDecision('A')">
+                    <span class="letter">A</span>
+                    <span class="text">提前全天停課</span>
+                    <span class="desc">安全第一，防患於未然。</span>
+                </button>
+                <button class="option-btn" onclick="makeDecision('B')">
+                    <span class="letter">B</span>
+                    <span class="text">正常上班上課</span>
+                    <span class="desc">風雨尚小，維持都市運作。</span>
+                </button>
+                <button class="option-btn" onclick="makeDecision('C')">
+                    <span class="letter">C</span>
+                    <span class="text">宣布半天停課</span>
+                    <span class="desc">依據晨間風雨彈性調整。</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Screen 3: Results -->
+        <section id="screen-results" class="card">
+            <div class="badge">統計報告</div>
+            <h2>決策分析結果</h2>
+            
+            <div class="user-choice-box">
+                你的選擇：<span id="user-choice-text">--</span>
+            </div>
+
+            <div class="stats-container">
+                <h3>高中生回答情形統計</h3>
+                <div class="stat-item">
+                    <div class="stat-info">
+                        <span>A. 提前停課 <small id="count-a" class="vote-count">(0 票)</small></span>
+                        <span id="stat-a-val">0%</span>
+                    </div>
+                    <div class="progress-bar"><div id="bar-a" class="bar"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-info">
+                        <span>B. 正常上班上課 <small id="count-b" class="vote-count">(0 票)</small></span>
+                        <span id="stat-b-val">0%</span>
+                    </div>
+                    <div class="progress-bar"><div id="bar-b" class="bar"></div></div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-info">
+                        <span>C. 半天停課 <small id="count-c" class="vote-count">(0 票)</small></span>
+                        <span id="stat-c-val">0%</span>
+                    </div>
+                    <div class="progress-bar"><div id="bar-c" class="bar"></div></div>
+                </div>
+            </div>
+
+            <p class="insight-text" id="insight-text"></p>
+            
+            <button class="btn btn-outline" onclick="location.reload()">重新模擬</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
