@@ -94,6 +94,14 @@ h2 {
     margin-bottom: 2rem;
 }
 
+.dept-name {
+    font-size: 0.9rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
 .badge {
     background: rgba(99, 102, 241, 0.2);
     color: var(--accent);
