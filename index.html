@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="background-overlay"></div>
     <div class="storm-particles" id="particles"></div>
@@ -51,7 +53,7 @@
         <section id="screen-results" class="card">
             <div class="badge">統計報告</div>
             <h2>決策分析結果</h2>
-            
+
             <div class="user-choice-box">
                 你的選擇：<span id="user-choice-text">--</span>
             </div>
@@ -63,26 +65,32 @@
                         <span>A. 提前停課 <small id="count-a" class="vote-count">(0 票)</small></span>
                         <span id="stat-a-val">0%</span>
                     </div>
-                    <div class="progress-bar"><div id="bar-a" class="bar"></div></div>
+                    <div class="progress-bar">
+                        <div id="bar-a" class="bar"></div>
+                    </div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-info">
                         <span>B. 正常上班上課 <small id="count-b" class="vote-count">(0 票)</small></span>
                         <span id="stat-b-val">0%</span>
                     </div>
-                    <div class="progress-bar"><div id="bar-b" class="bar"></div></div>
+                    <div class="progress-bar">
+                        <div id="bar-b" class="bar"></div>
+                    </div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-info">
                         <span>C. 半天停課 <small id="count-c" class="vote-count">(0 票)</small></span>
                         <span id="stat-c-val">0%</span>
                     </div>
-                    <div class="progress-bar"><div id="bar-c" class="bar"></div></div>
+                    <div class="progress-bar">
+                        <div id="bar-c" class="bar"></div>
+                    </div>
                 </div>
             </div>
 
             <p class="insight-text" id="insight-text"></p>
-            
+
             <button class="btn btn-outline" onclick="location.reload()">重新模擬</button>
         </section>
     </main>
@@ -93,4 +101,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
